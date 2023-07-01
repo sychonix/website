@@ -1,102 +1,106 @@
 ---
-import { SITE } from '~/config.mjs';
-import { getCanonical, getHomePermalink } from '~/utils/permalinks';
-import Layout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon';
-import { Twitter, Github } from './data.js';
+import { getHomePermalink } from '~/utils/permalinks';
 
-const name = 'Empower';
-const icon = 'empower';
-const network = 'mainnet';
-const chain = 'empowerchain-1';
-const version = 'v1.0.0';
-const stake = 'https://explorer.sychonix.me/empower-mainnet/staking/empowervaloper1n9yenan0nuxrqfy85pyrg5qatuwcnrawtt0tcw';
-const social = [
-  { label: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/sychonixx' },
-  { label: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/sychonix' },
-  { label: 'Mail', icon: 'tabler:mail', href: 'mailto:sychonixx@gmail.com' }
+const links = [
+	{
+		title: '',
+		items: [			
+			{ title: 'Explorer', href: 'https://explorer.sychonix.me/' }, 
+			{ title: 'Addrbook', href: '#' },
+			{ title: 'Genesis File', href: '#' },
+		],
+	},
+	{
+		title: '',
+		items: [
+			{ title: 'Public API', href: 'https://service.sychonix.me/#features2' },
+			{ title: 'Public RPC', href: 'https://service.sychonix.me/' },
+			{ title: 'Testnet Labs', href: 'https://service.sychonix.me/testnet' },
+			{ title: 'IBC Relayer', href: 'https://service.sychonix.me/relayer' },
+		],
+	},
+	{
+		title: '',
+		items: [
+			{ title: 'About Us', href: '#' },
+			{ title: 'Sitemap', href: '#' },	
+		],
+	},
 ];
-const meta = {
-  title: SITE.title,
-  description: SITE.description,
-  canonical: getCanonical(getHomePermalink()),
-  social: social // Menambahkan properti social dengan nilai dari array social
-};
 
-
-const items = [
- {
-  title: 'Explorer',
-  Link: 'https://explorer.sychonix.me/empower-mainnet',
- },
- {
-  title: 'Node installation',
-  Link: 'https://service.sychonix.me/mainnet/empower/installation',
- },
-  {
-  title: 'Genesis file',
-  Link: 'https://service.sychonix.me/mainnet/empower/genesis',
- },
-{
-  title: 'Peers',
-  Link: 'https://service.sychonix.me/mainnet/empower/peers',
- },
-  {
-  title: 'Addrbook',
-  Link: 'https://service.sychonix.me/mainnet/empower/addrbook',
- },
- {
-  title: 'CLI Cheatsheet',
-  Link: 'https://service.sychonix.me/mainnet/empower/cheat',
- },
-] 
+const social = [
+	{ label: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/sychonixx' },
+	{ label: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/sychonix' },
+	{ label: 'Mail', icon: 'tabler:mail', href: 'mailto: sychonixx@gmail.com' },
+];
 ---
 
-<Layout {meta}>
-  <section>
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="py-10 md:py-20">
-        <div class="text-center pb-5 md:pb-5 max-w-5xl mx-auto">
-          {social.map((item) => (
-        <a href={item.href} target="_blank" rel="noopener noreferrer" key={item.label}>
-         <Icon name={item.icon} class="w-8 h-8 inline-block align-text-bottom" />
-         </a>
-          ))}
-          <h1 class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
-            Service {name}
-          </h1>
-          <a class="btn bg-primary-400 w-1/4 items-center hover:bg-primary-400 font-bold md:pb-4" href={stake}>
-            Stake with me
-          </a>
-        </div>
-        <section class="bg-primary-100 dark:bg-slate-800 items-center">
-          <div class=" bg-transparent px-4 sm:px-6 py-4 text-md text-center font-medium">
-            <li>
-              <span class="font-bold">Network Type:</span> {network}
-            </li>
-            <li>
-              <span class="font-bold">Chain-id:</span> {chain}
-            </li>
-            <li>
-              <span class="font-bold">Node version:</span> {version}
-            </li>
-          </div>
-  
-</section>
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start my-10 dark:text-white">
-     {
-      items.map(({ title , Link }) => (
-      <a href={Link} target="_blank">  
-       <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-xl hover:shadow-lg transition dark:border dark:border-slate-800">
-        <div class="flex items-center mb-4 text-center">                        
-         <div class="ml-4 text-xl font-bold text-center">{title}</div>                                 
-        </div>
-       </div>
-      </a>  
-      ))
-     }
-    </div>
-   </div>
-  </div>
- </section>
- </Layout>
+<footer class="border-t border-gray-200 dark:border-slate-800">
+	<div class="max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
+			<div class="col-span-12 lg:col-span-4">
+				<div class="mb-2">
+					<a class="inline-block font-bold text-xl" href={getHomePermalink()}>Sychonix</a>
+				</div>
+				<div class="text-sm text-black">
+					<a
+						class="text-black hover:text-green-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+						href="#">Terms</a
+					> ·
+					<a
+						class="text-black hover:text-green-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+						href="#">Privacy Policy</a
+					>
+				</div>
+			</div>
+			{
+				links.map(({ title, items }) => (
+					<div class="col-span-6 md:col-span-3 lg:col-span-2">
+						<div class="text-gray-800 dark:text-gray-300 font-medium mb-2">{title}</div>
+						{items && Array.isArray(items) && items.length > 0 && (
+							<ul class="text-sm">
+								{items.map(({ title, href }) => (
+									<li class="mb-2">
+										<a
+											class="text-gray-600 hover:text-green-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
+											href={href}
+										>
+											{title}
+										</a>
+									</li>
+								))}
+							</ul>
+						)}
+					</div>
+				))
+			}
+		</div>
+		<div class="md:flex md:items-center md:justify-between py-2 md:py-4">
+			<ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
+				{
+					social.map(({ label, href, icon }) => (
+						<li>
+							<a
+								class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+								aria-label={label}
+								href={href}
+							>
+								<Icon name={icon} class="w-5 h-5" />
+							</a>
+						</li>
+					))
+				}
+			</ul>
+
+			<div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
+				<span
+					class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url()]"
+				>
+				</span>
+				Made by <a class="text-green-600 hover:underline dark:text-gray-200" href="#"> sychonix</a> ·
+				All rights reserved.
+			</div>
+		</div>
+	</div>
+</footer>
