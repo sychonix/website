@@ -41,10 +41,6 @@ const items = [
 		title: 'CLI Cheatsheet',
 		Link: 'https://service.sychonix.me/mainnet/empower/cheat',
 	},
-{
-    title: 'Twitter',
-    Link: 'https://twitter.com/your_twitter_link',
-  },
 ]	
 ---
 
@@ -62,22 +58,18 @@ const items = [
 							href={stake}>Stake with me</a>
 				</div>
 				<section class="bg-primary-100 dark:bg-slate-800 items-center">
-  <div class="bg-transparent px-4 sm:px-6 py-4 text-md text-center font-medium">
-    <li>
-      <span class="font-bold">Network Type:</span> {network}
-    </li>
-    <li>
-      <span class="font-bold">Chain-id:</span>
-      <span class="flex items-center">
-        <Icon name="Twitter" class="w-4 h-4 mr-2" />
-        {chain}
-      </span>
-    </li>
-    <li>
-      <span class="font-bold">Node version:</span> {version}
-    </li>
-  </div>
-</section>
+					<div class=" bg-transparent px-4 sm:px-6 py-4 text-md text-center font-medium">
+							<li>
+								<span class="font-bold">Network Type:</span> {network}							
+							</li>
+							<li>
+								<span class="font-bold">Chain-id:</span> {chain}							
+							</li>
+							<li>
+								<span class="font-bold">Node version:</span> {version}
+							</li>
+					</div>
+				</section>
 				<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start my-10 dark:text-white">
 					{
 						items.map(({ title , Link }) => (
