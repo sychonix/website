@@ -5,17 +5,24 @@ import Layout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon';
 import { Twitter, Github } from './data.js';
 
-const name= 'Empower';
-const icon= 'empower';
-const network= 'mainnet';
-const chain= 'empowerchain-1';
-const version= 'v1.0.0';
-const stake= 'https://explorer.sychonix.me/empower-mainnet/staking/empowervaloper1n9yenan0nuxrqfy85pyrg5qatuwcnrawtt0tcw';
+const name = 'Empower';
+const icon = 'empower';
+const network = 'mainnet';
+const chain = 'empowerchain-1';
+const version = 'v1.0.0';
+const stake = 'https://explorer.sychonix.me/empower-mainnet/staking/empowervaloper1n9yenan0nuxrqfy85pyrg5qatuwcnrawtt0tcw';
+const social = [
+  { label: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/sychonixx' },
+  { label: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/sychonix' },
+  { label: 'Mail', icon: 'tabler:mail', href: 'mailto:sychonixx@gmail.com' }
+];
 const meta = {
-	title: SITE.title,
-	description: SITE.description,
-	canonical: getCanonical(getHomePermalink()),
- };
+  title: SITE.title,
+  description: SITE.description,
+  canonical: getCanonical(getHomePermalink()),
+  social: social // Menambahkan properti social dengan nilai dari array social
+};
+
 
 const items = [
 	{
