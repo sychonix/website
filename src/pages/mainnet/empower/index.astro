@@ -57,11 +57,6 @@ const items = [
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="py-10 md:py-20">
         <div class="text-center pb-5 md:pb-5 max-w-5xl mx-auto">
-          {social.map((item) => (
-            <a href={item.href} target="_blank" rel="noopener noreferrer" key={item.label}>
-              <Icon name={item.icon} class="w-8 h-8 inline-block align-text-bottom" />
-            </a>
-          ))}
           <h1 class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
             Service {name}
           </h1>
@@ -80,8 +75,17 @@ const items = [
             <li>
               <span class="font-bold">Node version:</span> {version}
             </li>
+            {social.map((item) => (
+              <a href={item.href} target="_blank" rel="noopener noreferrer" key={item.label}>
+                <Icon name={item.icon} class="w-8 h-8 inline-block align-text-bottom" />
+              </a>
+            ))}
           </div>
-				</section>
+        </section>
+      </div>
+    </div>
+  </section>
+</Layout>
 				<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start my-10 dark:text-white">
 					{
 						items.map(({ title , Link }) => (
