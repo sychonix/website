@@ -119,6 +119,7 @@ export const footerData = {
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Discord', icon: 'tabler:brand-discord', href: '#' },
     { ariaLabel: 'Website', icon: 'tabler:globe', href: '#' },
   ],
   footNote: `
