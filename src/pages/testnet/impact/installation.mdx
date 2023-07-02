@@ -1,9 +1,4 @@
-
-layout: '~/layouts/MarkdownLayout.astro'
-title: Installation Node
-network: Testnet
-icon: impact
-
+---
 import { SITE } from '~/config.mjs';
 import { getCanonical, getHomePermalink } from '~/utils/permalinks';
 import Layout from '~/layouts/PageLayout.astro';
@@ -23,6 +18,14 @@ const meta = {
 	canonical: getCanonical(getHomePermalink()),
 };
 ]
+---
+
+---
+layout: '~/layouts/MarkdownLayout.astro'
+title: Installation Node
+network: Testnet
+icon: impact
+---
 
 ### Install Dependencies
 ```
