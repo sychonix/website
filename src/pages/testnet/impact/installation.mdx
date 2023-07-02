@@ -1,8 +1,3 @@
-const social = [
-  { label: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/Impact_Protocol' },
-  { label: 'Discord', icon: 'tabler:brand-discord', href: 'http://discord.gg/25n4x6pyuP' },
-  { label: 'Chrome',  icon: 'tabler:brand-chrome', href: 'https://impactprotocol.network/' },
-
 ---
 layout: '~/layouts/MarkdownLayout.astro'
 title: Installation Node
@@ -95,8 +90,30 @@ Enter your Secret seed in the form below.
 ```
 Check your node [in here](https://telemetry.polkadot.io/#list/0x1133ca761f24222cb0811f34641dba07acd88c77bd9f30a23a99c2cba233cb91)
 
-    <Layout {meta}>
-       <section>
+    import { SITE } from '~/config.mjs';
+import { getCanonical, getHomePermalink } from '~/utils/permalinks';
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon';
+
+const name = 'Impact Protocol';
+const icon = 'impact';
+const network = 'Testnet';
+const social = [
+  { label: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/Impact_Protocol' },
+  { label: 'Discord', icon: 'tabler:brand-discord', href: 'http://discord.gg/25n4x6pyuP' },
+  { label: 'Chrome', icon: 'tabler:brand-chrome', href: 'https://impactprotocol.network/' },
+];
+
+const HomePage = () => {
+  const items = [
+    { title: 'Item 1', Link: 'https://example.com/item1' },
+    { title: 'Item 2', Link: 'https://example.com/item2' },
+    { title: 'Item 3', Link: 'https://example.com/item3' },
+  ];
+
+  return (
+    <Layout title={SITE.title} description={SITE.description} canonical={getCanonical(getHomePermalink())}>
+      <section>
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="py-10 md:py-20">
             <div className="text-center pb-5 md:pb-5 max-w-5xl mx-auto">
@@ -141,3 +158,7 @@ Check your node [in here](https://telemetry.polkadot.io/#list/0x1133ca761f24222c
         </div>
       </section>
     </Layout>
+  );
+};
+
+export default HomePage;
