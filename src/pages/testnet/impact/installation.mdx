@@ -1,19 +1,7 @@
----
-import { SITE } from '~/config.mjs';
-import { getCanonical, getHomePermalink } from '~/utils/permalinks';
-import Layout from '~/layouts/PageLayout.astro';
-import { Icon } from 'astro-icon';
-
-const name= 'Impact Protocol';
-const icon= 'impact';
-const network= 'Testnet';
 const social = [
   { label: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/Impact_Protocol' },
   { label: 'Discord', icon: 'tabler:brand-discord', href: 'http://discord.gg/25n4x6pyuP' },
   { label: 'Chrome',  icon: 'tabler:brand-chrome', href: 'https://impactprotocol.network/' },
-};
-]
----
 
 ---
 layout: '~/layouts/MarkdownLayout.astro'
