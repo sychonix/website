@@ -5,8 +5,12 @@ network: Testnet
 icon: elixir
 ---
 
+<div style="position: relative;">
+  <button style="position: absolute; top: 0; right: 0; padding: 4px; background-color: #f0f0f0; border: none; cursor: pointer;" onclick="navigator.clipboard.writeText('sudo curl -L \"https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)\" -o /usr/local/bin/docker-compose')">Copy</button>
+</div>
+
 ### Install docker compose
-```shell
+```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 ```
 ```
