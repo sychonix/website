@@ -14,7 +14,7 @@ const stake = 'https://explorer.sychonix.me/empower-mainnet/staking/empowervalop
 const social = [
   { label: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/empowerchain_io' },
   { label: 'Discord', icon: 'tabler:brand-discord', href: 'https://discord.gg/UTxEzFzHVX' },
-  { label: 'Website', icon: 'tabler:globe', href: 'https://empowerchain.io/' }
+  { label: 'Chrome',  icon: 'tabler:brand-chrome', href: 'https://empowerchain.io/' },
 ];
 const meta = {
   title: SITE.title,
@@ -78,10 +78,8 @@ const items = [
             </li>
             {social.map((item) => (
               <a href={item.href} target="_blank" rel="noopener noreferrer" key={item.label}>
-            <div class="rounded-full bg-gray-200 w-12 h-12 flex items-center justify-center">
            <Icon name={item.icon} class="w-8 h-8 text-gray-600" />
-          </div>
-          </a>
+           </a>
             ))}
           </div>
         </section>
