@@ -12,9 +12,9 @@ const chain = 'empowerchain-1';
 const version = 'v1.0.0';
 const stake = 'https://explorer.sychonix.me/empower-mainnet/staking/empowervaloper1n9yenan0nuxrqfy85pyrg5qatuwcnrawtt0tcw';
 const social = [
-  { label: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/sychonixx' },
-  { label: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/sychonix' },
-  { label: 'Mail', icon: 'tabler:mail', href: 'mailto:sychonixx@gmail.com' }
+  { label: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/empowerchain_io' },
+  { label: 'Discord', icon: 'tabler:brand-discord', href: 'https://discord.gg/UTxEzFzHVX' },
+  { label: 'Website', icon: 'tabler:globe', href: 'https://empowerchain.io/' }
 ];
 const meta = {
   title: SITE.title,
@@ -78,8 +78,10 @@ const items = [
             </li>
             {social.map((item) => (
               <a href={item.href} target="_blank" rel="noopener noreferrer" key={item.label}>
-                <Icon name={item.icon} class="w-8 h-8 inline-block align-text-bottom" />
-              </a>
+            <div class="rounded-full bg-gray-200 w-12 h-12 flex items-center justify-center">
+           <Icon name={item.icon} class="w-8 h-8 text-gray-600" />
+          </div>
+          </a>
             ))}
           </div>
         </section>
