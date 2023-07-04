@@ -5,6 +5,7 @@ network: Testnet
 icon: creditcoin
 ---
 
+**before you run validator, make sure to get a faucet by [filling this form](https://form.typeform.com/to/yGrtGCJO)**
 ### Install Docker 
 ```
 sudo apt-get update && sudo apt install jq git && sudo apt install apt-transport-https ca-certificates curl software-properties-common -y && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin && sudo apt-get install docker-compose-plugin 
@@ -39,7 +40,7 @@ docker run -d \
 ```
 docker logs -f creditcoin-validator
 ```
-Open [explorer and search for your validator name] (https://telemetry.creditcoin.network/#list/0xc2e43792c8acc075e564558f9a2184a0ffe9b0fd573969599eee9b647358c6cf) with the browser 
+Open [explorer and search for your validator name](https://telemetry.creditcoin.network/#list/0xc2e43792c8acc075e564558f9a2184a0ffe9b0fd573969599eee9b647358c6cf) with the browser 
 
 ### activate the validator
 create 2 wallets and don't forget to save pharse
