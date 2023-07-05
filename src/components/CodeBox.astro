@@ -3,10 +3,10 @@ export function CodeBox({ code }) {
   function copyToClipboard() {
     navigator.clipboard.writeText(code)
       .then(() => {
-        alert("Command berhasil disalin!");
+        alert("Command successfully copied!");
       })
       .catch(() => {
-        alert("Tidak dapat menyalin command.");
+        alert("Cannot copy commands.");
       });
   }
 
