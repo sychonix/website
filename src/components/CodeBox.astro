@@ -1,22 +1,16 @@
 <astroscript>
-  export function CodeBox({ code }) {
-    function copyToClipboard() {
-      navigator.clipboard.writeText(code)
-        .then(() => {
-          alert("Command berhasil disalin!");
-        })
-        .catch(() => {
-          alert("Tidak dapat menyalin command.");
-        });
-    }
-
-    return (
-      <div>
-        <pre>
-          <code>{code}</code>
-        </pre>
-        <button onClick={copyToClipboard}>Salin</button>
-      </div>
-    );
+export function CodeBox({ code }) {
+  function copyToClipboard() {
+    navigator.clipboard.writeText(code)
+      .then(() => {
+        alert("Command berhasil disalin!");
+      })
+      .catch(() => {
+        alert("Tidak dapat menyalin command.");
+      });
   }
-</astroscript>
+
+  return (
+    <div>
+      <pre>
+        <code
