@@ -5,6 +5,19 @@ network: Testnet
 icon: creditcoin
 ---
 
+<!-- Tambahkan daftar konten sosial di bawah ini -->
+const social = [
+  { label: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/AndromedaProt' },
+  { label: 'Discord', icon: 'tabler:brand-discord', href: 'https://discord.gg/GBd6buKYyZ' },
+  { label: 'Chrome',  icon: 'tabler:brand-chrome',  href: 'https://www.andromedaprotocol.io/' },
+]
+
+<!-- Tampilkan ikon sosial dan tautan menggunakan sintaks Markdown -->
+<!-- Tampilkan ikon sosial dan tautan menggunakan sintaks Markdown -->
+{#each social as item}
+[![]({{item.icon}})]({{item.href}}) &nbsp;&nbsp;
+{/each}
+
 **before you run validator, make sure to get a faucet by [filling this form](https://form.typeform.com/to/yGrtGCJO)**
 ### Install Docker 
 ```
