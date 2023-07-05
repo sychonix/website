@@ -2,6 +2,7 @@
 import { SITE } from '~/config.mjs';
 import { getCanonical, getHomePermalink } from '~/utils/permalinks';
 import Layout from '~/layouts/PageLayout.astro';
+import CodeBox from '~/src/components/CodeBox.astro'; // Tambahkan impor CodeBox di sini
 
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -21,5 +22,6 @@ const meta = {
 	<Features />
 	<Features2 />
 	<Features3 />
+	<CodeBox /> {/* Tambahkan komponen CodeBox di sini */}
 	<CallToAction />
 </Layout>
