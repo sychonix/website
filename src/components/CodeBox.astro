@@ -1,16 +1,28 @@
 <astroscript>
-export function CodeBox({ code }) {
-  function copyToClipboard() {
-    navigator.clipboard.writeText(code)
-      .then(() => {
-        alert("Command successfully copied!");
-      })
-      .catch(() => {
-        alert("Cannot copy commands.");
-      });
-  }
+  import { useState } from 'react';
 
-  return (
-    <div>
-      <pre>
-        <code
+  export function CodeBoxWithCopyButton({ code }) {
+    const [isCopied, setIsCopied] = useState(false);
+
+    function copyToClipboard() {
+      navigator.clipboard.writeText(code)
+        .then(() => {
+          setIsCopied(true);
+        })
+        .catch(() => {
+          setIsCopied(false);
+        });
+    }
+
+    return (
+      <div>
+        <pre>
+          <code>{code}</code>
+        </pre>
+        <button onClick={copyToClipboard}>
+          {isCopied ? 'Tersalin!' : 'Salin'}
+        </button>
+      </div>
+    );
+  }
+</astroscript>
