@@ -1,10 +1,10 @@
----
+<pre>
+  <code id="codeBox">
 layout: '~/layouts/MarkdownLayout.astro'
 title: Installation Node
 network: Testnet
 icon: elixir
 ---
-
 
 ### Install docker compose
 ```
@@ -56,3 +56,29 @@ docker run -it --name ev elixir-validator
 ```
 docker logs -f <Container ID>
 ```
+
+  </code>
+</pre>
+
+<button onclick="copyCode()">Salin</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  function copyCode() {
+    const code = document.getElementById('codeBox').innerText;
+    navigator.clipboard.writeText(code)
+      .then(() => {
+        Swal.fire({
+          icon: 'success',
+          text: 'Kode berhasil disalin!',
+        });
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: 'error',
+          text: 'Gagal menyalin kode: ' + error,
+        });
+      });
+  }
+</script>
