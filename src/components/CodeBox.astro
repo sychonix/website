@@ -3,14 +3,20 @@ export function CodeBox({ code }) {
   function copyToClipboard() {
     navigator.clipboard.writeText(code)
       .then(() => {
-        alert("Command berhasil disalin!");
+        alert("Command successfully copied!");
       })
       .catch(() => {
-        alert("Tidak dapat menyalin command.");
+        alert("Cannot copy commands.");
       });
   }
 
   return (
     <div>
       <pre>
-        <code
+        <code>{code}</code>
+      </pre>
+      <button onClick={copyToClipboard}>Copy</button>
+    </div>
+  );
+}
+</astroscript>
