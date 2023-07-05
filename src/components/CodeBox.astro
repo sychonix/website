@@ -1,15 +1,12 @@
- import { useState } from 'react';
-
-  export function CodeBoxWithCopyButton({ code }) {
-    const [isCopied, setIsCopied] = useState(false);
-
+<astroscript>
+  export function CodeBox({ code }) {
     function copyToClipboard() {
       navigator.clipboard.writeText(code)
         .then(() => {
-          setIsCopied(true);
+          alert("Command berhasil disalin!");
         })
         .catch(() => {
-          setIsCopied(false);
+          alert("Tidak dapat menyalin command.");
         });
     }
 
@@ -18,9 +15,7 @@
         <pre>
           <code>{code}</code>
         </pre>
-        <button onClick={copyToClipboard}>
-          {isCopied ? 'Tersalin!' : 'Salin'}
-        </button>
+        <button onClick={copyToClipboard}>Salin</button>
       </div>
     );
   }
