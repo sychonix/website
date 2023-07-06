@@ -5,13 +5,8 @@ network: Testnet
 icon: impact
 ---
 
-<:head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-</:head>
-
 ### Install Dependencies
 ```
-<div class="copy-text">
 sudo apt-get update
 sudo apt install --assume-yes git clang curl libssl-dev llvm libudev-dev make protobuf-compiler
 sudo apt install build-essential
@@ -24,21 +19,6 @@ rustup update nightly
 rustup target add wasm32-unknown-unknown --toolchain nightly
 rustup show
 rustup +nightly show
-
-<script>
-function copyText(selector) {
-  var text = document.querySelector(selector).innerText;
-  var input = document.createElement('input');
-  input.setAttribute('value', text);
-  document.body.appendChild(input);
-  input.select();
-  document.execCommand('copy');
-  document.body.removeChild(input);
-}
-</script>
-
-<i class="fas fa-copy" data-clipboard-target=".copy-text"></i>
-<i class="fas fa-clipboard" onclick="copyText('.copy-text')"></i>
 ```
 
 ### Create a New Screen
