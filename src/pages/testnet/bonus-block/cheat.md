@@ -232,7 +232,7 @@ version:
   </div>
 
 <pre class="my-pre">
-archwad tx staking edit-validator \
+bonus-blockd tx staking edit-validator \
 --new-moniker="<span class="reditmoniker1"></span>" \
 --identity="<span class="reditidentity1"></span>" \
 --details="<span class="reditdetails1"></span>" \
