@@ -7,14 +7,6 @@ chain: elystestnet-1
 version: v1.1.1
 ---
 
-<div id="popup" class="popup">
-		<div class="popup-content">
-			<span class="closebtn" onclick="closePopup()">&times;</span>
-			<p>Please fill out the form before using cheatcli. Cheatcli will not work if the form is not filled out.</p>
-		</div>
-	</div>
-
-
 <style>
   .my-pre {
     background-color: #1f1f1f;
