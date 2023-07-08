@@ -1,10 +1,10 @@
 ---
 layout: '~/layouts/MarkdownLayout.astro'
 title: Node CLI Cheatsheet
-logo: https://pbs.twimg.com/profile_images/1634228216977301504/ZRS8VQyT_400x400.jpg
 network: Testnet
+icon: elys
 chain: elystestnet-1
-version: v1.1.1
+version: v0.5.4
 ---
 
 
