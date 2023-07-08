@@ -191,8 +191,8 @@ version: v0.5.2
 </div>
 
 
-<pre class="my-pre">elysd tx staking create-validator \
---amount=<span class="ramount1"></span>0000000uelys \
+<pre class="my-pre">archwayd tx staking create-validator \
+--amount=<span class="ramount1"></span>0000000aconst \
 --moniker="<span class="rmoniker1"></span>" \
 --pubkey=$(archwayd tendermint show-validator) \
 --identity="<span class="ridentity1"></span>" \
@@ -231,7 +231,7 @@ version: v0.5.2
   </div>
 
 <pre class="my-pre">
-elysd tx staking edit-validator \
+archwad tx staking edit-validator \
 --new-moniker="<span class="reditmoniker1"></span>" \
 --identity="<span class="reditidentity1"></span>" \
 --details="<span class="reditdetails1"></span>" \
@@ -244,7 +244,7 @@ elysd tx staking edit-validator \
 
 
 <label for="iwallet" style="vertical-align: top;">3. Unjail Validator</label>
-<pre class="my-pre"> archwayd tx slashing unjail --broadcast-mode=block --from <span class="rwallet10">  </span> --chain-id elystestnet-1 --gas="1000000" --gas-prices="0uelys"
+<pre class="my-pre"> archwayd tx slashing unjail --broadcast-mode=block --from <span class="rwallet10">  </span> --chain-id constantine-3 --gas="1000000" --gas-prices="0aconst"
 </pre>
 
 <label for="iwallet" style="vertical-align: top;">4. Jail Reason</label>
@@ -257,7 +257,7 @@ elysd tx staking edit-validator \
 
 <h3 for="imoniker">Token Management</h3>
 <label for="ivalidator" style="vertical-align: top;">1. Withdraw rewards from all validators</label>
-<pre class="my-pre"> archwayd tx distribution withdraw-all-rewards --from <span class="rwallet12"></span> --chain-id constantine-3 --gas="1000000" --gas-prices="0uelys"</pre>
+<pre class="my-pre"> archwayd tx distribution withdraw-all-rewards --from <span class="rwallet12"></span> --chain-id constantine-3 --gas="1000000" --gas-prices="0aconst"</pre>
 
 <label for="ivalidator" style="vertical-align: top;">2. Withdraw commission and rewards from your validator</label>
 <pre class="my-pre"> archwayd tx distribution withdraw-rewards $(archwayd keys show <span class="rwallet13"></span> --bech val -a) --commission --from <span class="rwallet14"></span> --chain-id constantine-3 --gas="1000000" --gas-prices="300000000000000000aconst" --gas-prices="0aconst"</pre>
@@ -293,7 +293,7 @@ elysd tx staking edit-validator \
 
 </div>
  <pre class="my-pre" id="pre1" style="margin-top: 5px;">
-elysd tx bank send<span class="rwallet22"></span> <span class="rtoken1"></span> <span class="rdelegete5"></span>000000000aconst --from <span class="rwallet23"></span> --chain-id constantine-3 --gas="1000000" --gas-prices="0aconst"
+archwayd tx bank send<span class="rwallet22"></span> <span class="rtoken1"></span> <span class="rdelegete5"></span>000000000aconst --from <span class="rwallet23"></span> --chain-id constantine-3 --gas="1000000" --gas-prices="0aconst"
 </pre></div>
 
 <h3 for="iwallet">Costum Port</h3>
