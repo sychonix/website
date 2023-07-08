@@ -294,7 +294,7 @@ archwad tx staking edit-validator \
 
 </div>
  <pre class="my-pre" id="pre1" style="margin-top: 5px;">
-andromedad tx bank send<span class="rwallet22"></span> <span class="rtoken1"></span> <span class="rdelegete5"></span>1000000000ubonus --from <span class="rwallet23"></span> --chain-id blocktopia-01 --gas="1000000" --gas-prices="0ubonus"
+ bonus-blockd tx bank send<span class="rwallet22"></span> <span class="rtoken1"></span> <span class="rdelegete5"></span>1000000000ubonus --from <span class="rwallet23"></span> --chain-id blocktopia-01 --gas="1000000" --gas-prices="0ubonus"
 </pre></div>
 
 <h3 for="iwallet">Costum Port</h3>
